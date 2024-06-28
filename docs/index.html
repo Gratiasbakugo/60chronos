@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60Chrono</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <audio id="audio1" autoplay>
+        <source src="cyberpunk-gaming-144149.mp3" type=" audio/mpeg">
+    </audio>
+    <audio id="audio2" src="race-cars-phonk-gaming-music-196477.mp3"></audio>
+      <!-- HEADER -->
+      <header>
+        <h1>60Chrono</h1>
+        
+        
+    </header>
+    <!-- MAIN -->
+    <main>
+        <div class="zoneOptions">
+            <h3>Gravis le classement, deviens la légende du clavier !</h3>
+            
+            <div class="optionSource">
+                <input type="radio" name="optionSource" id="mots" value="1" checked>
+                <label for="mots">Mots</label>
+                <input type="radio" name="optionSource" id="phrases" value="2">
+                <label for="phrases">Phrases</label>
+            </div>
+        </div>
+        <div class="zoneProposition">
+            
+        </div>
+        <div class="zoneSaisie">
+            <input type="text" id="inputEcriture" name="inputEcriture">  
+            </div>
+
+           
+       
+              <div class="zoneScore">
+                   Votre score : <span>0</span>
+              </div>
+              <div class="result">
+       
+             <div class="ec" id="ec"></div>
+       
+            <div class="erreur">
+                erreur : <span>0</span>
+            </div>
+            <div class="pourcentage">
+                pourcentage : <span>0%</span>
+            </div>
+            <div class="correct">
+                correct : <span>0</span>
+            </div>
+        
+        </div>   
+</div>
+<div></div>
+
+    
+    <p id="temps"></p>
+    <button id="btnLancerMinuteur" class="btn">start</button>
+    <div class="minuteur" >
+        temps : <span id="temps">01:00</span>
+        
+    </div> 
+    </main>
+    <div id="popup" class="modal-content" style="display: none;">
+        <h2>Statistiques du jeu</h2>
+        <ul>
+            <li>Score : <span id="scorePopup"></span></li>
+             <li>Erreurs : <span id="erreurPopup"></span></li> 
+        </ul>
+            <ul>
+            <li>Pourcentage : <span id="pourcentagePopup"></span></li>
+            <li>Temps écoulé : <span id="tempsEcoulePopup"></span></li>
+        </ul>
+        <button id="btnFermerPopup" class="btne">Fermer</button>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        @Copyright : bokodeogratias. 
+    </footer>
+   
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  
+</body>
+</html>
+
+

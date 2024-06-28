@@ -1,0 +1,345 @@
+
+   /**
+ * Reset
+ */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+ * Eléments génériques
+ */
+
+body {
+    --color-primary: #f76c5e;
+    --color-secondary: #f68e5f;
+    --color-tertiary: #ffeee6;  
+    background-image: url(_.jpeg);  
+}
+
+
+/* Mise en forme des titres */
+h1 {
+    margin: 10px;
+    font-size: 60px; 
+    font-weight: 900;
+    color: white;
+    text-shadow: 0 0 20px #00fffb,0 0 40px #0081bc;
+    background: linear-gradient(90deg,#00ffff,#ff00d3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: orange;
+}
+
+
+/* Mise en forme des formulaires */
+input[type='radio'] {
+    filter: grayscale(1); /* Grayscale passe le bouton en niveau de gris */
+}
+
+
+input[type='text'],
+input[type='email'] {
+    width: 100%;
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--color-primary);
+}
+
+input[type='text']::placeholder,
+input[type='email']::placeholder {
+    color: var(--color-secondary);
+    opacity: 50%;
+}
+
+.btn {
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 60;
+    font-size: 17px;
+    color: white ;
+    background-color: green;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 30px;
+}
+
+
+
+
+/**
+ * Eléments principaux
+ */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif; 
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    min-width: 200px;
+    margin-bottom: 50px;
+    padding: 50px;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 30px;
+    background-image: url(toxc.jpeg);
+}
+h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+    background-color: black;
+}
+
+/**
+ * Mise en forme des éléments de la zone principale
+ */
+
+/* Zone d'options */
+.optionSource {
+    margin: 20px;
+    text-align: center;
+}
+
+.optionSource input[type='radio']:not(:first-child) {
+    margin-left: 20px;
+
+}
+
+/* Zone ou sera affiché le texte (mot ou phrase) à afficher */
+.zoneProposition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin-bottom: 10px ; 
+    margin-left: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Zone de saisie */
+.zoneSaisie {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Eléments du formulaire de saisie */
+.zoneSaisie input[type='text'] {
+    width: 100%;
+}
+
+.zoneSaisie button {
+    width: 20%;
+}
+
+.zoneScore{
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+.erreur{
+    
+    
+    color: #03224c;
+    
+}
+
+.correct{
+    
+   
+   color: #062b16;
+   
+
+}
+#ec{
+    
+   
+   text-align: center;
+   
+}
+.erreur, .pourcentage, .correct{
+
+display: inline-block;
+margin-left: 65px;
+
+
+}
+
+/**
+  * Gestion des popups
+  */
+
+.popupBackground {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+.active {
+    display: flex !important;
+}
+
+
+/** 
+ * Responsive
+ */
+
+
+ /* En dessous de 1200 px */
+@media screen and (max-width: 1200px) {
+    main {
+        width: 60%;
+        padding: 30px;
+    }
+}
+
+
+/* En dessous de 800 px */
+@media screen and (max-width: 800px) {
+    main {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+  }
+
+
+  #popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  
+  
+  .modal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    z-index: -1;
+  }
+  .modal-content {
+    
+    
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  height: 90vh;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+ul{
+    display: inline-block;
+    list-style: none;
+    padding: 100px;
+    
+}
+ul li{
+    margin: 100px;
+    
+}
+#btnFermerPopup{
+    text-align: center;
+}
+
+.btne {
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 60;
+    font-size: 17px;
+    color: white ;
+    background-color: green;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.result{
+    background-color: gray;
+    border-radius: 20px;
+   padding: 20px;
+}
+.minuteur{
+    text-align: bottom;
+    font-size: 20px;
+}
